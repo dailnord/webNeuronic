@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import { BrowserRouter, Routes, Route, NavLink, useLocation, useNavigate, Navigate } from 'react-router-dom'
+import { HashRouter, Routes, Route, NavLink, useLocation, useNavigate, Navigate } from 'react-router-dom'
 import About from './components/about/About'
 import Products from './components/products/Products'
 import Contact from './components/contact/Contact'
@@ -95,7 +95,7 @@ function NavBar() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <NavBar />
       <main className='main-content'>
         <Routes>
@@ -112,7 +112,7 @@ function App() {
           <Route path='/products/Prod_5' element={<Prod_5/>}></Route>
         </Routes>
       </main>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
