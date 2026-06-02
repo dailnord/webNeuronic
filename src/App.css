@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.navbar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 271px;
+  z-index: 1000;
+}
+
+.navbar-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.navImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.nav-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-links-bg {
+  background-color: #FFFFFF;
+  border-radius: 50px; 
+  padding: 10px 40px;
+  display: flex;
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 70%;
+  width: 60%;
+  box-sizing: border-box; 
+}
+
+.nav-links {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #243883; 
+  font-weight: bold;
+  font-family: sans-serif;
+  margin: 0 15px;
+  padding-bottom: 5px;
+}
+
+.nav-links a.active { 
+  border-bottom: 3px solid #EF791C; 
+}
+
+.logo-img {
+  height: 80px; 
+  width: auto;  
+  display: block;
+  position: relative;
+  margin: 20px auto; 
+}
+
+.main-content{
+  margin-top: 271px;
+  padding: 20px 80px;
+  box-sizing: border-box;
+}
+
+.nav-links-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-arrow {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-10px);
+}
+
+.nav-arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.nav-arrow img {
+  width: 40px;   
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 200px;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  .nav-links-bg {
+    width: 90%;
+    padding: 0 12px;
+    top: 90px;
+    box-sizing: border-box;
+  }
+
+  .nav-links a {
+    font-size: 20px;
+    margin: 0 8px;
+    white-space: nowrap;
+  }
+
+  .logo-img {
+    height: 50px;
+    margin: 15px auto;
+    max-width: 90%;
+  }
+
+  .main-content {
+    margin-top: 200px;
+    padding: 15px 20px;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  h3{
+    font-size: 20px;
+  }
+
+  h4{
+    font-size: 20px;
+  }
+
+  p{
+    font-size: 20px;
+  }
+}
+
+h3{
+    color: #27327A
+}
+
+p{
+  text-align: justify;
+  hyphens: auto;
+  text-justify: inter-word;
+}
+
