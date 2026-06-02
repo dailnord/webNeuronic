@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import { HashRouter, Routes, Route, NavLink, useLocation, useNavigate, Navigate } from 'react-router-dom'
+import { HashRouter, Routes, Route, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import About from './components/about/About'
 import Products from './components/products/Products'
 import Contact from './components/contact/Contact'
@@ -99,7 +99,7 @@ function App() {
       <NavBar />
       <main className='main-content'>
         <Routes>
-          <Route path='/' element={<Navigate to="/products" replace />}></Route>
+          <Route path='/' element={<Products/>}></Route>
           <Route path='/about' element={<About/>}></Route>
           <Route path='/products' element={<Products/>}></Route>
           <Route path='/contact' element={<Contact/>}></Route>
