@@ -1,7 +1,7 @@
 import flecha from '../img/flecha.svg';
 import bateriasA from '../img/bateriasA.svg';
-import baterias_a from '../img/baterias_a.svg';
 import './products.css';
+import bateriasB from '../img/bateriasB.svg';
 import { Link } from 'react-router-dom';
 
 const Prod_2 = () => {
@@ -10,16 +10,20 @@ const Prod_2 = () => {
       id: 'Categoria_1', 
       nombre: 'Baterías A',
       img: bateriasA,
-      img2: baterias_a,
-      nombre2: 'Baterías B',
+      descripcion: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit...'
+    },
+    {
+      id: 'Categoria_1', 
+      nombre: 'Baterías B',
+      img: bateriasB,
       descripcion: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit...'
     },
   ];
   
   return (
-    <div>
+    <div className='products-batery'>
       <div className='back'>
-        <Link to={'/categorias/Categoria_1'}><img src={flecha}></img></Link>
+        <Link to={'/products/'}><img src={flecha}></img></Link>
       </div>
 
       <div className='products_categoria1'>
@@ -32,12 +36,6 @@ const Prod_2 = () => {
                   <h2>{cat.nombre}</h2>
                   <h4>Información/ Descripción</h4>
                   <p>{cat.descripcion}</p>
-                  <div className='bat2-card'>
-                    <Link to='/products/Prod_3'>
-                      <img src={cat.img2} alt={cat.nombre2} />
-                        <h4>{cat.nombre2}</h4>
-                    </Link>
-                  </div>
                      <button>Comprar</button>
                 </div>
               </div>

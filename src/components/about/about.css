@@ -43,6 +43,7 @@ h4{
   .about-image img {
     width: 100%;
     max-width: 300px;
+    display: none;
   }
 
   .about-container {

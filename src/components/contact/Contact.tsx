@@ -1,27 +1,67 @@
+import React, { useState } from 'react';
 import './contact.css'
 
 const Contact = () => {
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Aquí puedes agregar la lógica para enviar el formulario
+    console.log('Email:', email);
+    console.log('Mensaje:', message);
+    alert('¡Mensaje enviado! Te contactaremos pronto.');
+    // Limpiar campos si lo deseas
+    setEmail('');
+    setMessage('');
+  };
+
   return (
     <div className='contact-container'>
-      <h3 className='contact-title'>Dirección</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Vel vitae at nisi quam consectetur incidunt, cum labore 
-        excepturi corporis expedita numquam odit, sint quod in? 
-        Ipsam minima illum delectus eum.</p>
+      <div className="contact-card">
+        <h1>Contáctanos</h1>
+        <p>
+          Estamos comprometidos con ofrecer soluciones médicas de alta calidad
+          para hospitales y centros de salud. Si desea obtener más información
+          sobre nuestro producto, no dude en comunicarse con nosotros. Nuestro
+          equipo de expertos está listo para responder sus preguntas y brindarle
+          toda la información que necesite.
+        </p>
 
-      <h3 className='contact-title'>Números de contacto</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Ab dolorem debitis aperiam harum ea asperiores ipsum similique 
-        nemo ut! Explicabo doloremque, hic illo libero quisquam perspiciatis 
-        expedita unde laudantium labore.</p>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="email">Tu email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="example@email.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
 
-      <h3 className='contact-title'>Correo electrónico</h3>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        Ratione quo voluptatibus, deleniti dolorem perferendis beatae 
-        cupiditate molestias laudantium ipsam necessitatibus omnis minima 
-        est voluptatem ipsum tempore saepe in modi fugiat.</p>
+          <div className="form-group">
+            <label htmlFor="message">Mensaje</label>
+            <textarea
+              id="message"
+              rows="4"
+              placeholder="Si necesita más información, envíenos un mensaje y le contestaremos en breve."
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              required
+            />
+          </div>
+
+          <div className='button-wrapper'>
+            <button type="submit" className="submit-btn">
+            Enviar
+          </button>
+          </div>
+        </form>
+      </div>
     </div>
-  )
+  );
 }
 
 export default Contact

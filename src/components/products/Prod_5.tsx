@@ -6,7 +6,7 @@ import './products.css';
 const Prod_5 = () => {
     const product = [
     {
-      id: 'Categoria_2', 
+      id: 'Categoria_2',
       nombre: 'Hisopos',
       img: hisop2,
       descripcion: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit...'
@@ -16,14 +16,14 @@ const Prod_5 = () => {
   return (
     <div>
       <div className='back'>
-        <Link to={'/categorias/Categoria_2'}><img src={flecha}></img></Link>
+        <Link to={'/products/'}><img src={flecha}></img></Link>
       </div>
 
       <div className='products_categoria1'>
         <div className='pd_cat'>
           {product.map((cat) => (
             <div key={cat.id} className='products-card-container'>
-              <div className='products-card'>
+              <div className='producth-card'>
                 <img src={cat.img} alt={cat.nombre} />
                 <div className='products-info'>
                   <h2>{cat.nombre}</h2>
@@ -34,7 +34,7 @@ const Prod_5 = () => {
               </div>
             </div>
           ))}
-        </div>    
+        </div>
       </div>
     </div>
   )

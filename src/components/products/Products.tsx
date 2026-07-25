@@ -1,28 +1,35 @@
 import { Link } from 'react-router-dom';
 import './products.css';
-import categoria1 from '../img/categoria_1.svg';
-import categoria2 from '../img/categoria_2.svg';
+import baterías_1 from '../img/baterías_1.svg';
+import kit2 from '../img/kit2.svg';
+import hisop2 from '../img/hisop2.svg';
 
 const Products = () => {
-  const categorias = [
+  const products = [
     {
-      id: 'Categoria_1', 
-      nombre: 'Categoría 1',
-      img: categoria1,
+      id: 'Prod_2',
+      nombre: 'Baterías',
+      img: baterías_1,
       descripcion: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit...'
     },
     {
-      id: 'Categoria_2',
-      nombre: 'Categoría 2',
-      img: categoria2,
+      id: 'Prod_4',
+      nombre: 'Kit Higiénico Corporal',
+      img: kit2,
       descripcion: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit...'
-    }
+    },
+    {
+      id: 'Prod_5',
+      nombre: 'Hisopos',
+      img: hisop2,
+      descripcion: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit...'
+    },
   ];
 
   return (
     <div className='products-container'>
-      {categorias.map((cat) => (
-        <Link to={`/categorias/${cat.id}`} key={cat.id} className='product-card-link'>
+      {products.map((cat) => (
+        <Link to={`/products/${cat.id}`} key={cat.id} className='product-card-link'>
           <div className='product-card'>
             <img src={cat.img} alt={cat.nombre} />
             <div className='product-info'>

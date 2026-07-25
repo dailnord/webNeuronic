@@ -16,13 +16,13 @@ const Prod_4 = () => {
   return (
     <div>
       <div className='back'>
-        <Link to={'/categorias/Categoria_2'}><img src={flecha}></img></Link>
+        <Link to={'/products/'}><img src={flecha}></img></Link>
       </div>
 
-      <div className='products_categoria1'>
-        <div className='pd_cat'>
+      <div className='products_categoria4'>
+        <div className='pd_hp'>
           {product.map((cat) => (
-            <div key={cat.id} className='products-card-container'>
+            <div key={cat.id} className='products-card-container4'>
               <div className='products-card'>
                 <img src={cat.img} alt={cat.nombre} />
                 <div className='products-info'>

@@ -8,9 +8,6 @@ import logoEmpresa from './components/img/logo-empresa.svg'
 import navImg from './components/img/img_nav.png'
 import flechaIzq from './components/img/flecha_izq.svg'
 import flechaDer from './components/img/flecha_derecha.svg'
-import Categoria_1 from './components/categorias/Categoria_1'
-import Categoria_2 from './components/categorias/Categoria_2'
-import Prod_1 from './components/products/Prod_1'
 import Prod_2 from './components/products/Prod_2'
 import Prod_3 from './components/products/Prod_3'
 import Prod_4 from './components/products/Prod_4'
@@ -103,9 +100,6 @@ function App() {
           <Route path='/about' element={<About/>}></Route>
           <Route path='/products' element={<Products/>}></Route>
           <Route path='/contact' element={<Contact/>}></Route>
-          <Route path='/categorias/Categoria_1' element={<Categoria_1/>}></Route>
-          <Route path='/categorias/Categoria_2' element={<Categoria_2/>}></Route>
-          <Route path='/products/Prod_1' element={<Prod_1/>}></Route>
           <Route path='/products/Prod_2' element={<Prod_2/>}></Route>
           <Route path='/products/Prod_3' element={<Prod_3/>}></Route>
           <Route path='/products/Prod_4' element={<Prod_4/>}></Route>

@@ -50,7 +50,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   opacity: 70%;
-  width: 60%;
+  width: 80%;
   box-sizing: border-box; 
 }
 
@@ -67,7 +67,6 @@ body {
   font-weight: bold;
   font-family: sans-serif;
   margin: 0 15px;
-  padding-bottom: 5px;
 }
 
 .nav-links a.active { 
@@ -99,6 +98,7 @@ body {
   border: none;
   padding: 0;
   cursor: pointer;
+  margin-top: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -145,7 +145,7 @@ body {
 
   .main-content {
     margin-top: 200px;
-    padding: 15px 20px;
+    padding: 1px 20px;
     max-width: 100%;
     overflow-x: hidden;
     box-sizing: border-box;
@@ -174,3 +174,16 @@ p{
   text-justify: inter-word;
 }
 
+button{
+  padding: 14px;
+    background-color: #27327A;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.25s, transform 0.1s;
+    letter-spacing: 0.3px;
+    display: inline-block;
+}

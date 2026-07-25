@@ -19,7 +19,7 @@ const Prod_3 = () => {
   return (
     <div>
       <div className='back'>
-        <Link to={'/categorias/Categoria_1'}><img src={flecha}></img></Link>
+        <Link to={'/products/'}><img src={flecha}></img></Link>
       </div>
 
       <div className='products_categoria1'>
